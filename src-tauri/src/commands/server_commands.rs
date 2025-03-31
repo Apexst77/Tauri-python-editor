@@ -16,7 +16,7 @@ pub async fn start_server(
     let mut server = state.lock().unwrap();
 
     if server.child.is_some() {
-        return Ok(()); // 이미 실행 중이면 무시
+        return Ok(()); 
     }
 
     let (mut _events, child) = app

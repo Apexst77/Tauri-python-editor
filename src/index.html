@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MonacoWithTauri</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./monaco-editor/min/vs/loader.js"></script>
+  <script type="module" src="./main.js"></script>
+</head>
+<body>
+  <div data-tauri-drag-region class="titlebar">
+    <div data-tauri-drag-region class="titlebar-left">
+      <img src="./assets/icons/AppIcon.svg" alt="Left Icon" id="titlebar-icon" />
+    </div>
+    <div data-tauri-drag-region class="titlebar-right">
+      <div class="titlebar-button" id="titlebar-minimize">
+        <img src="./assets/icons/mdi-window-minimize.svg" alt="minimize" />
+      </div>
+      <div class="titlebar-button" id="titlebar-maximize">
+        <img src="./assets/icons/mdi-window-maximize.svg" alt="maximize" />
+      </div>
+      <div class="titlebar-button" id="titlebar-close">
+        <img src="./assets/icons/mdi-close.svg" alt="close" />
+      </div>
+    </div>
+  </div>
+
+  <div id="monacoEditor">
+    <div id="monacoEditorContainer"></div>
+  </div>
+
+  <div id="region-bottom"></div>
+</body>
+</html>

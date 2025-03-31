@@ -1,0 +1,127 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  padding-top: 35px;
+  padding-bottom: 20px;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+    "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* draggable region */
+#region-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 35px;
+  -webkit-app-region: drag;
+  display: flex;
+  align-items: center;
+}
+
+/* titlebar */
+.titlebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 35px;
+  background: #232323;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  user-select: none;
+}
+
+.titlebar-left {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.titlebar-left img {
+  width: 14px;
+  height: 14px;
+  margin-bottom: 3px;
+  pointer-events: none;
+}
+
+.titlebar-right {
+  display: flex;
+  align-items: center;
+}
+
+.titlebar-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 35px;
+  user-select: none;
+}
+
+.titlebar-button:hover {
+  background: #393939;
+}
+
+.titlebar-button:active {
+  background: #565656;
+}
+
+#titlebar-close:hover {
+  background: #ed3636;
+}
+
+#titlebar-close:active {
+  background: #c62c2c;
+}
+
+#titlebar-minimize img,
+#titlebar-close img {
+  width: 16px;
+  height: 16px;
+}
+
+#titlebar-maximize img {
+  width: 14px;
+  height: 14px;
+}
+
+/* bottom region */
+#region-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-color: #232323;
+  z-index: 1000;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* monaco editor */
+#monacoEditor {
+  position: fixed;
+  top: 35px;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  background-color: #1d1d1d;
+  user-select: none;
+  z-index: 99;
+}
+
+#monacoEditorContainer {
+  margin-top: 5px;
+  width: 100%;
+  height: calc(100% - 10px);
+  position: relative;
+}

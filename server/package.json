@@ -1,0 +1,45 @@
+{
+  "name": "pyright-playground-server",
+  "version": "1.0.0",
+  "dependencies": {
+    "applicationinsights": "^2.9.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.19.2",
+    "package-json": "^8.1.1",
+    "pyright": "^1.1.398",
+    "uuid": "^9.0.1",
+    "vscode-jsonrpc": "^8.2.0",
+    "vscode-languageclient": "^9.0.1",
+    "vscode-languageserver": "^9.0.1",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/uuid": "^9.0.6",
+    "pkg": "^5.8.1",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.0",
+    "webpack": "^5.76.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "scripts": {
+    "build": "webpack --mode development --progress",
+    "pkg": "pkg ."
+  },
+  "private": true,
+  "main": "build/main.js",
+  "bin": "build/main.js",
+  "pkg": {
+    "scripts": "build/**/*.js",
+    "assets": [
+      "node_modules/pyright/**/*"
+    ],
+    "targets": [
+      "node18-win-x64"
+    ],
+    "outputPath": "dist"
+  }
+}

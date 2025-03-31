@@ -91,7 +91,9 @@ Replace the empty string with the actual path to your virtual environment. This 
 - If you experience issues with Pyright resolution, double-check the `venvPath` and ensure Pyright can access it.
 - The Python version configured for **Pyright** is **3.12.9** (used for static type analysis, not for installation/runtime).
 - For debugging, only **port 1430** is allowed on the host. Ensure any debug-related tools or connections use this port.
-
+- This project is configured primarily for **Windows**.  
+  To adapt it for other platforms, refer to the `server/` directory for platform-specific adjustments.
+  
 ---
 
 ## ⚠️ Warning: Hot Reload and Unexpected Shutdown

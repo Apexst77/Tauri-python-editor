@@ -371,7 +371,7 @@ async function installPyright(requestedVersion: string | undefined): Promise<Ins
     } else {
         version = await getPyrightLatestVersion();
     }
-    version = "1.1.398";
+    version = "1.1.398"; // Force the version to 1.1.398 for now.
     return new Promise<InstallPyrightInfo>((resolve, reject) => {
         const dirName = `./pyright_local/${version}`;
 
@@ -379,7 +379,7 @@ async function installPyright(requestedVersion: string | undefined): Promise<Ins
             fs.existsSync(dirName) &&
             fs.existsSync(path.join(dirName, "node_modules", "pyright", "langserver.index.js"))
           ) {
-            logger.info(`✅ Pyright ${version} already installed & ready`);
+            logger.info(`Pyright ${version} already installed & ready`);
             resolve({ pyrightVersion: version, localDirectory: dirName });
             return;
           }
@@ -431,8 +431,8 @@ function synthesizePyrightConfigFile(tempDirPath: string, sessionOptions?: Sessi
     // trying to resolve imports using the default Python environment
     // installed on the server's docker container.
     if (sessionOptions?.venvPath) {
-        config.venvPath = path.dirname(sessionOptions.venvPath); // ✅ 부모 폴더
-        config.venv = path.basename(sessionOptions.venvPath);    // ✅ venv 폴더 이름
+        config.venvPath = path.dirname(sessionOptions.venvPath);
+        config.venv = path.basename(sessionOptions.venvPath);
     }
 
     config.venv = 'venv';

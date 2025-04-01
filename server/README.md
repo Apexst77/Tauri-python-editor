@@ -10,7 +10,7 @@ npm run build
 node index.js
 ```
 
-## Build SideCar
+## Build Sidecar
 
 ```bash
 npm run pkg

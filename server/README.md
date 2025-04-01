@@ -31,3 +31,4 @@ Example filenames by platform:
 
 - **Linux (x64)**  
   `pyright-server-x86_64-unknown-linux-gnu`
+  

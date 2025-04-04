@@ -32,3 +32,5 @@ Example filenames by platform:
 - **Linux (x64)**  
   `pyright-server-x86_64-unknown-linux-gnu`
   
+
+This server code is based on a modified version of [erictraut/pyright-playground](https://github.com/erictraut/pyright-playground).

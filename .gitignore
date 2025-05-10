@@ -9,6 +9,7 @@ lerna-debug.log*
 
 # node_modules
 dist
+!src-tauri/pyright_local/1.1.398/node_modules/pyright/dist/
 dist-ssr
 *.local
 
